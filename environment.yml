@@ -1,0 +1,12 @@
+name: cog-cluster-refiner
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.9
+  - numpy
+  - pandas
+  - hmmer        # hmmbuild, hmmsearch
+  - clustalo     # Clustal Omega
+  # - mafft      # optional: only for `01_build_hmms.py --aligner mafft`
+  # - biopython   # optional: only needed for the scripts in original_scripts/

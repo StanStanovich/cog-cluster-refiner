@@ -1,0 +1,58 @@
+{
+  "_documentation": "Every key is an option of the step scripts (underscores instead of hyphens); see docs/PARAMETERS.md for what each one does.",
+  "description": "Same values as relaxing_3_iterations.json, except that a pair of clusters is tried as soon as it shares two sequences (min_overlap 0, min_shared 2) in every iteration; the alignment checks decide. This approximates how the original scripts selected merge candidates (see CHANGES_FROM_ORIGINAL.md).",
+  "iterations": [
+    {
+      "merge": {
+        "score_window": 0.35,
+        "min_overlap": 0.0,
+        "min_shared": 2,
+        "rep_sample_size": 50,
+        "pre_min_consensus": 0.28,
+        "expand_min_fit": 0.24,
+        "pre_min_fit": 0.24,
+        "pre_max_fit_diff": 0.55,
+        "post_max_bad_fraction": 0.22,
+        "post_member_fit": 0.22
+      }
+    },
+    {
+      "merge": {
+        "score_window": 0.45,
+        "min_overlap": 0.0,
+        "min_shared": 2,
+        "rep_sample_size": 50,
+        "pre_min_consensus": 0.24,
+        "expand_min_fit": 0.2,
+        "pre_min_fit": 0.2,
+        "pre_max_fit_diff": 0.7,
+        "post_max_bad_fraction": 0.3,
+        "post_member_fit": 0.2
+      }
+    },
+    {
+      "merge": {
+        "score_window": 0.55,
+        "min_overlap": 0.0,
+        "min_shared": 2,
+        "rep_sample_size": 50,
+        "pre_min_consensus": 0.2,
+        "expand_min_fit": 0.17,
+        "pre_min_fit": 0.17,
+        "pre_max_fit_diff": 0.9,
+        "post_max_bad_fraction": 0.33,
+        "post_member_fit": 0.2
+      }
+    }
+  ],
+  "add_unclustered": {
+    "top_n": 3,
+    "top_ratio": 1.35,
+    "score_window": 0.3,
+    "window_min_members": 6,
+    "min_fit": 0.3,
+    "rep_size": 40,
+    "post_member_fit": 0.22,
+    "post_max_bad_fraction": 0.22
+  }
+}
