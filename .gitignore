@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Pipeline output (can be large)
+results/
+profiles/
+alignments/
+hits/
+merged*/
+dedup*/
+logs/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# data and results of the original scripts (they write into the folder they are run in)
+COGs/
+hmmsearch_combined/
+addcog_only_*/
