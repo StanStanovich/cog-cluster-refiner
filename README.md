@@ -10,15 +10,15 @@ the merge makes sense. The process is repeated for a few iterations.
 
 ```mermaid
 flowchart TD
-    A[cluster FASTA files] --> B["1. build_hmms<br/>one HMM profile per cluster"]
-    B --> C["2. search_hmms<br/>all sequences vs all profiles"]
-    C --> D["3. merge_clusters<br/>expand + merge, with alignment checks"]
-    D --> E["4. deduplicate_clusters<br/>each sequence in exactly one cluster"]
-    E -->|"after iteration 1 only"| U["new profiles + search, then<br/>5. add_unclustered<br/>add sequences that are in no cluster"]
-    U --> E2["4. deduplicate_clusters<br/>(again, just in case)"]
-    E2 --> N["iteration 2, 3: same steps 1-4,<br/>with more relaxed parameters"]
-    E -->|"later iterations"| N
-    N --> F[refined clusters]
+    A[Cluster FASTA files] --> B["1. Build_hmms<br/>One HMM profile per cluster"]
+    B --> C["2. Search_hmms<br/>All sequences vs all profiles"]
+    C --> D["3. Merge_clusters<br/>Expand + merge, with alignment checks"]
+    D --> E["4. Deduplicate_clusters<br/>Each sequence in exactly one cluster"]
+    E -->|"After iteration 1 only"| U["New profiles + search, then<br/>5. Add_unclustered<br/>Add sequences that are in no cluster"]
+    U --> E2["4. Deduplicate_clusters<br/>(again, just in case)"]
+    E2 --> N["Iteration 2, 3: same steps 1-4,<br/>with more relaxed parameters"]
+    E -->|"Later iterations"| N
+    N --> F[Refined clusters]
 ```
 
 ## Requirements
