@@ -212,13 +212,13 @@ python scripts/04_deduplicate_clusters.py --clusters enlarged/ --out enlarged_de
 (`run_pipeline.py` does all of this for you.) The clustered sequences have to be searched as well,
 because the script needs to know what a typical member scores. For each unclustered sequence:
 
-1. take the 3 clusters whose profile scores it best (`--top-n`);
-2. the best score must be at least 1.35 times the second best (`--top-ratio`) — a clear winner;
-3. in each of those clusters the sequence must pass the **score window** (its score is within ±30 %
+1. Take the 3 clusters whose profile scores it best (`--top-n`);
+2. The best score must be at least 1.35 times the second best (`--top-ratio`) — a clear winner;
+3. In each of those clusters the sequence must pass the **score window** (its score is within ±30 %
    of the median member score; clusters with fewer than 6 scored members skip this) and the
    **alignment fit** (`--min-fit 0.30`);
-4. the best-fitting cluster that passed is chosen;
-5. **post-add check:** the cluster plus the new sequence are aligned; the sequence is added only if
+4. The best-fitting cluster that passed is chosen;
+5. **post-add check:** The cluster plus the new sequence are aligned; the sequence is added only if
    at most 22 % of the members fit badly.
 
 Every sequence is judged against the clusters as they were before this step, so the order does not
